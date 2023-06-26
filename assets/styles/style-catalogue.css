@@ -20,7 +20,7 @@ h2 span {
 }
 
 /*CATALOGUE*/
-.catalogue {
+#catalog {
   display: grid;
   grid-template-areas: "aside library";
   grid-template-columns: 20% 80%;
@@ -55,14 +55,14 @@ aside a:hover {
 aside .active {
   font-weight: bold;
 }
-.library {
+#library {
   grid-area: library;
   display: grid;
   grid-template-columns: repeat(4, 25%);
 }
-.library article {
+#library article {
   width: 100%;
 }
-.library article img {
+#library article img {
   width: 100%;
 }

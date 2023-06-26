@@ -5,26 +5,10 @@ let Header =
 {
 	setup ()
 	{
-		let items =
-			[
-				{
-					title: "Votre bibliothèque en ligne",
-					buttons: true
-				},
-				{
-					title: "La collection",
-					buttons: false
-				}
-			];
-			
-		let item = null;
-		if (window.location.pathname === "/JavaScript/js-vue-yepages/index.html")
-		{
-			item = items[0];
-		}
 		
-		console.log(item);
-		return item;
+		let path = window.location.pathname;
+		console.log(path);
+		return {  path : path};
 		
 	},
 	data () {
@@ -33,34 +17,32 @@ let Header =
 			[
 				{
 					name: "Accueil",
-					href: "index.html"
+					href: "https://laurelineagabibrac.sites.3wa.io/JavaScript/js-vue-yepages/index.html"
 				},
 				{
 					name: "Livres",
-					href: "livres/index.html"
+					href: "https://laurelineagabibrac.sites.3wa.io/JavaScript/js-vue-yepages/livres/index.html"
 				},
 				{
 					name: "Compte",
 					href: "#"
 				}
 			],
-			// item: 
-			// {
-			// 	title: "Votre bibliothèque en ligne",
-			// 	buttons: true
-			// }
 			
 			items:
 			[
 				{
 					title: "Votre bibliothèque en ligne",
-					buttons: true
+					buttons: true,
+					path: "/JavaScript/js-vue-yepages/index.html"
 				},
 				{
 					title: "La collection",
-					buttons: false
+					buttons: false,
+					path: "/JavaScript/js-vue-yepages/livres/index.html"
 				}
-			]
+			],
+			path :""
 		};
 	},
 	components: 
@@ -70,7 +52,9 @@ let Header =
 	template:
 	`<header>
 		<Nav :links="links"/>
-		<Presentation :items="items"/>
+		<template v-for="item in items">
+		<Presentation v-if="item.path === path" :item="item"/>
+		</template>
 	</header>
 	`
 };

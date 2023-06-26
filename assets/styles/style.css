@@ -112,17 +112,17 @@ h2 span {
     padding-bottom:.3em;
     border-bottom: 5px solid var(--bright-pink-crayola);
 }
-.library {
+#library {
     display:flex;
     flex-wrap:wrap;
     padding:1em;
 }
-.library article {
+#library article {
     width:calc(100% / 3);
     padding:1em;
     text-align:center;
 }
-.library article figure {
+#library article figure {
     display:flex;
     justify-content:center;
     align-items:flex-start;
@@ -130,7 +130,7 @@ h2 span {
     height:25em;
     margin:0;
 }
-.library article h2 {
+#library article h2 {
     height: 2.5em;
 }
 .category {

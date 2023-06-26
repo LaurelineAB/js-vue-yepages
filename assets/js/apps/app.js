@@ -1,9 +1,19 @@
 import {Header} from "../components/Header.js";
+import {Main} from "../components/Main.js";
+
 
 let App =
 {
-    components: {Header},
-    template : `<Header/>`
+    components: 
+    {
+        Header, 
+        Main
+        
+    },
+    
+    template : 
+    `<Header/>
+    <Main/>`
     
 };
 
