@@ -57,7 +57,7 @@ nav ul li a.active {
     color: var(--sunglow);
 }
 
-header .actions {
+#presentation {
     display:flex;
     justify-content:center;
     padding: 5em;
@@ -65,17 +65,17 @@ header .actions {
     color:white;
     background-image: url(../images/home-books.png);
 }
-.actions h1 {
+#presentation h1 {
     font-family: "Poppins", sans-serif;
     font-size:5rem;
     margin:0;
 }
-.actions h2 {
+#presentation h2 {
     /*font-family: "Poppins", sans-serif;*/
     font-size:3rem;
     margin:0;
 }
-.actions a {
+#presentation a {
     display: inline-block;
     width: 12em;
     padding: .4em;
